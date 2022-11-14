@@ -3,6 +3,19 @@
   <groupId>com.salesforce</groupId>
   <artifactId>salesforce</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  
+  
+   <properties>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<junit.version>4.13.1</junit.version>
+		<cucumber.version>6.9.0</cucumber.version>
+		<maven.compiler.version>3.8.1</maven.compiler.version>
+		<maven.surefire.version>2.22.2</maven.surefire.version>
+
+	</properties>
     <dependencies>
   
     <dependency>
@@ -60,10 +73,8 @@
 
   
   </dependencies>
-  
+  <build>
   <plugins>
-
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -115,5 +126,6 @@
 
 
 		</plugins>
+		</build>
   
 </project>
