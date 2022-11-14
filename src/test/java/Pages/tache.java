@@ -27,7 +27,7 @@ public class tache {
 		connexion.enterEmail(Browserhelper.driver);
 		connexion.enterMdp(Browserhelper.driver);
 		Browserhelper.driver.findElement(By.xpath("//input[contains(@id,'Login')]")).click();
-		Browserhelper.driver.findElement(By.xpath("//a[contains(text(),'Me le rappeler ultérieurement')]")).click();	
+		//Browserhelper.driver.findElement(By.xpath("//a[contains(text(),'Me le rappeler ultérieurement')]")).click();	
 		// cliquer sur le menu pour selectionner vente 
 		Browserhelper.driver.findElement(By.xpath("//button/div/div[8]")).click();
 				// chercher ventes 

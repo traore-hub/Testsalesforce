@@ -6,7 +6,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions (features="src/test/resources/feature/tache.feature", 
 glue= "StepDef",
 tags= "@tag",
-plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+plugin = {"pretty",
+        "html:target/report/cucumber.html",
+        "json:target/report/cucumber.json"
+})
 
 
 
