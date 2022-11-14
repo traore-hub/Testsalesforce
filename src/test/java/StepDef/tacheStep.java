@@ -55,12 +55,16 @@ public class tacheStep {
 		tch.cliquer_sur_modifier(Browserhelper.driver);
 	  
 	}
-
-	@Then("Modifier objet")
+	@Then("Modifier objet avec le nom {string}")
+	public void modifier_objet_avec_le_nom(String modifobj)throws Throwable {
+		tch.modifier_objet_avec_le_nom(Browserhelper.driver, modifobj);
+	   
+	}
+	/*@Then("Modifier objet")
 	public void modifier_objet()throws Throwable {
 		tch.modifier_objet(Browserhelper.driver);
 	 
-	}
+	}*/
 
 	@Then("Modifier le statut")
 	public void modifier_le_statut()throws Throwable {
@@ -77,7 +81,13 @@ public class tacheStep {
 	@Then("Cliquer sur enrigistrer")
 	public void cliquer_sur_enrigistrer()throws Throwable {
 		tch.cliquer_sur_enrigistrer(Browserhelper.driver);
+		tch.verfication_du_modification(Browserhelper.driver);
 	   
+	}
+	@When("Cliquer sur supprimer")
+	public void cliquer_sur_supprimer() throws Throwable{
+		tch.cliquer_sur_supprimer(Browserhelper.driver);
+	    
 	}
 
 }

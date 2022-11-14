@@ -61,4 +61,59 @@
   
   </dependencies>
   
+  <plugins>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+				<configuration>
+					<includes>
+						<include>**/ParallelRun.java</include>
+					</includes>
+					<parallel>methods</parallel>
+					<threadCount>4</threadCount>
+					<useUnlimitedThreads>false</useUnlimitedThreads>
+					  <systemPropertyVariables>
+        <extent.reporter.spark.start>true</extent.reporter.spark.start>
+        <extent.reporter.spark.out>test-output/SparkReport/Spark.html</extent.reporter.spark.out>
+    </systemPropertyVariables>
+				</configuration>
+				
+			
+  
+
+			</plugin>
+
+			 <plugin> <groupId>org.apache.maven.plugins</groupId>
+			 <artifactId>maven-failsafe-plugin</artifactId> 
+				<version>3.0.0-M3</version>
+				 <executions> 
+			<execution> <goals> <goal>integration-test</goal> 
+				</goals> <configuration> 
+ <excludes> 
+				<exclude>**/*IT*.java</exclude> </excludes> <includes>
+				<include>Runner.java</include> 
+				 <include>**/*Run.java</include> 
+				</includes> 
+<parallel>methods</parallel> <threadCount>4</threadCount> <perCoreThreadCount>true</perCoreThreadCount> 
+				
+ 
+				<forkCount>2</forkCount> <reuseForks>true</reuseForks> <reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory> 
+				</configuration> </execution> </executions> </plugin> 
+
+
+		</plugins>
+  
 </project>

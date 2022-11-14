@@ -19,8 +19,14 @@ Feature: tache
     When Chercher la tache par le nom 
     And Selectionner la tache 
     And Cliquer sur modifier 
-    Then Modifier objet 
+    Then Modifier objet avec le nom "une_nouvelle_modification"
     And Modifier le statut
     And Modifier le priorité 
     And Cliquer sur enrigistrer  
- 
+    @tag3
+  Scenario: supprimer une  tache
+   Given Se connecter sur saleforce
+    And cliquer sur tache 
+    When Chercher la tache par le nom 
+    And Selectionner la tache 
+    And Cliquer sur supprimer 
