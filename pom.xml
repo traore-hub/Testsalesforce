@@ -113,14 +113,11 @@
 				 <executions> 
 			<execution> <goals> <goal>integration-test</goal> 
 				</goals> <configuration> 
- <excludes> 
-				<exclude>**/*IT*.java</exclude> </excludes> <includes>
-				<include>Runner.java</include> 
+  <excludes> 
+				<exclude>**/*IT*.java</exclude> </excludes>
+				 <includes> 
 				 <include>**/*Run.java</include> 
 				</includes> 
-<parallel>methods</parallel> <threadCount>4</threadCount> <perCoreThreadCount>true</perCoreThreadCount> 
-				
- 
 				<forkCount>2</forkCount> <reuseForks>true</reuseForks> <reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory> 
 				</configuration> </execution> </executions> </plugin> 
 
