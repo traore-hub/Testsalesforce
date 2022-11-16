@@ -8,7 +8,7 @@ import common.*;
 
 public class connexion {
 	
-	WebDriver driver=null;
+	WebDriver driver = null;
 	
 	public connexion(WebDriver driver) {
 		this.driver = driver;

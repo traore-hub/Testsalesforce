@@ -1,7 +1,5 @@
 @tag
 Feature: tache
-  I want to use this template for my feature file
-
   @tag1
   Scenario: creation tache
     Given Se connecter sur saleforce
@@ -10,8 +8,7 @@ Feature: tache
     And Entrer lobjet 
     And Selectionner le priorité
     Then Selectionner le statut 
-    And Cliquer sur enregistrer 
-    
+    And Cliquer sur enregistrer   
    @tag2
   Scenario: modification tache
    Given Se connecter sur saleforce

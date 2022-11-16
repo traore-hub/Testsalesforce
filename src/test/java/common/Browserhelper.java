@@ -23,19 +23,14 @@ public class Browserhelper {
 		driver.get(URl);
 	}
 
-
-	
-	
 	public static WebDriver initializeDriver(WebDriver driver) throws Exception {
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications"); //disable popup notification
+		options.addArguments("--disable-notifications"); // disable popup notification
 		System.setProperty("webdriver.chrome.driver", Utils.getProperty("TestDriverPath"));
-		driver =new ChromeDriver(options);
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		return (driver);
 	}
-	
-
 
 	public static void clickOnElement(WebDriver driver, WebElement element) throws Exception {
 		try {
