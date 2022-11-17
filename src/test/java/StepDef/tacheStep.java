@@ -81,11 +81,11 @@ public class tacheStep {
 	@Then("Modifier le priorité")
 	public void modifier_le_priorité() throws Throwable {
 		tch.modifier_le_priorité(Browserhelper.driver);
-
+		
 	}
 
-	@Then("Cliquer sur enrigistrer")
-	public void cliquer_sur_enrigistrer() throws Throwable {
+	@Then("Cliquer sur enrigistrer modification tache")
+	public void cliquer_sur_enrigistrer_modification_tache() throws Throwable {
 		tch.cliquer_sur_enrigistrer_m_tache(Browserhelper.driver);
 		tch.verfication_du_modification(Browserhelper.driver);
 		

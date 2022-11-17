@@ -186,34 +186,39 @@ public class groupe {
 		assertEquals(verifopp.getText().contains(nomOPP), true);
 		driver.quit();
 	}
-	
-	
-	
-	public void cliquer_sur_publication(WebDriver driver)throws Throwable {
+
+	public void cliquer_sur_publication(WebDriver driver) throws Throwable {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();",
 				driver.findElement(By.xpath("//section/div/div/button")));
 		Thread.sleep(2000);
-		   
+
 	}
 
 	@Then("Ajouter une publication {string}")
-	public void ajouter_une_publication(WebDriver driver,String publ)throws Throwable {
-		((JavascriptExecutor) driver).executeScript("arguments[0].sendKeys(PUB);",
-				driver.findElement(By.xpath("//section/div/div/button")));
-         WebElement pub = driver.findElement(By.xpath("//span[@class=' label bBody'][contains(text(),'Partagez une mise à jour...')]"));
-         VerifPub = publ;
+	public void ajouter_une_publication(WebDriver driver, String publ) throws Throwable {
+		WebElement pub = driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/div/div/div/div/p"));
+		VerifPub = publ;
 		pub.sendKeys(VerifPub);
-		
+
 		System.out.println("la publication est  : " + VerifPub);
-	   
+
 	}
 
 	@Then("Cliquer sur partager publication")
-	public void cliquer_sur_partager_publication(WebDriver driver)throws Throwable {
-		driver.findElement(By.xpath("//div[3]/div/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div")).click();
+	public void cliquer_sur_partager_publication(WebDriver driver) throws Throwable {
+		// pour trouver l'element au dessus de la page
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement Elemennt = driver
+				.findElement(By.xpath("//div[3]/div/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div"));
+		js.executeScript("arguments[0].scrollIntoView();", Elemennt);
+		driver.findElement(By.xpath(
+				"//button[contains(@class,'slds-button slds-button_brand cuf-publisherShareButton qe-textPostDesktop MEDIUM')]"))
+				.click();
 		Thread.sleep(1500);
+		// pour verifier la creation d'une publication
 		WebElement vpub = driver.findElement(By.xpath("//div[2]/div/div/p/span"));
-		assertEquals(VerifPub, vpub.getText());
+		assertEquals(VerifPub, vpub.getText() + " ");
+		driver.quit();
 
 	}
 

@@ -73,7 +73,6 @@ public class tache {
 	public void cliquer_sur_enregistrer(WebDriver driver) throws Throwable {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();",
 				driver.findElement(By.xpath("//*/text()[normalize-space(.)='Enregistrer']/parent::*")));
-		
 
 	}
 
@@ -133,13 +132,16 @@ public class tache {
 
 	public void verfication_du_modification(WebDriver driver) throws Throwable {
 		assertEquals(NomObjetModifier, driver.findElement(By.xpath("//div[2]/div/div/div[2]/span/span")).getText());
+		System.out.println(driver.findElement(By.xpath("//div[2]/div/div/div[2]/span/span")).getText());
 		driver.quit();
 	}
 
 	public void cliquer_sur_supprimer(WebDriver driver) throws Throwable {
 		Thread.sleep(2000);
 // pour ouvrir la selection ou on trouve supprimer 
-		driver.findElement(By.cssSelector("div.slds-col.slds-no-flex.slds-grid.slds-grid_vertical-align-center.actionsContainer > ul.branding-actions.slds-button-group.slds-m-left--xx-small.oneActionsRibbon.forceActionsContainer > li.slds-button.slds-button--icon-border-filled.oneActionsDropDown")).click();
+		driver.findElement(By.cssSelector(
+				"div.slds-col.slds-no-flex.slds-grid.slds-grid_vertical-align-center.actionsContainer > ul.branding-actions.slds-button-group.slds-m-left--xx-small.oneActionsRibbon.forceActionsContainer > li.slds-button.slds-button--icon-border-filled.oneActionsDropDown"))
+				.click();
 // selectionner l'option supprimer 
 		driver.findElement(By.cssSelector("a[title=\"Supprimer\"]")).click();
 //confirmer la suppression 
