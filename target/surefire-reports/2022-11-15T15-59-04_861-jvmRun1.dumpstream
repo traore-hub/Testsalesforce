@@ -1,0 +1,97 @@
+# Created at 2022-11-15T15:59:22.331
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+
+# Created at 2022-11-15T15:59:54.435
+Unexpected IOException with stream:   [32mAnd [0m[32mdelete this opportunity[0m                        [90m# Stepdefinition.DeleteOpportunity.delete_this_opportunity()[0m
+
+
+# Created at 2022-11-15T15:59:54.616
+Unexpected IOException with stream: ************Test finish***************
+
+
+# Created at 2022-11-15T15:59:54.616
+Unexpected IOException with stream:   [32mThen [0m[32mverify if opportunity delete[0m                  [90m# Stepdefinition.DeleteOpportunity.verify_if_opportunity_delete()[0m
+
+
+# Created at 2022-11-15T15:59:54.616
+Unexpected IOException with stream: ************Test finish***************
+
+
+# Created at 2022-11-15T15:59:54.616
+Unexpected IOException with stream:   [32mAnd [0m[32mclose Browser[0m                                  [90m# Stepdefinition.CreationOppportunity.close_browser()[0m
+
+
+# Created at 2022-11-15T15:59:54.623
+Unexpected IOException with stream: 
+@Modify
+Scenario: Modify opportunity              [90m# src/main/resources/Features/ModifyOpportunity.feature:3[0m
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream: Test started****************
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream:   [32mGiven [0m[32mnavigate to url salesforce modify[0m [90m# Stepdefinition.ModifyOpportunity.navigate_to_url_salesforce_modify()[0m
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream: check list
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream:   [32mWhen [0m[32muser check opportunity list[0m        [90m# Stepdefinition.ModifyOpportunity.user_check_opportunity_list()[0m
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream:   [31mAnd [0m[31mselect opportunity and click[0m        [90m# Stepdefinition.ModifyOpportunity.select_opportunity_and_click()[0m
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream:       [31mjava.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+	at Stepdefinition.ModifyOpportunity.select_opportunity_and_click(ModifyOpportunity.java:35)
+	at ✽.select opportunity and click(file:///C:/Users/toumarou/IdeaProjects/Testsalesforce-master/src/main/resources/Features/ModifyOpportunity.feature:6)
+[0m
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream:   [36mAnd [0m[36mclick button modify[0m                 [90m# Stepdefinition.ModifyOpportunity.click_button_modify()[0m
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream:   [36mAnd [0m[36mmodify information the opportunity[0m  [90m# Stepdefinition.ModifyOpportunity.modify_information_the_opportunity()[0m
+
+
+# Created at 2022-11-15T15:59:54.634
+Unexpected IOException with stream:   [36mThen [0m[36mclick save[0m                         [90m# Stepdefinition.ModifyOpportunity.click_save()[0m
+
+
+# Created at 2022-11-15T15:59:54.664
+Unexpected IOException with stream: [32m[1m┌───────────────────────────────────────────────────────────────────────────────────┐[0m
+[32m[1m│[0m Share your Cucumber Report with your team at [36m[1m[4mhttps://reports.cucumber.io[0m          [32m[1m│[0m
+[32m[1m│[0m Activate publishing with one of the following:                                    [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m src/test/resources/cucumber.properties:          [36mcucumber.publish.enabled[0m=[36mtrue[0m    [32m[1m│[0m
+[32m[1m│[0m src/test/resources/junit-platform.properties:    [36mcucumber.publish.enabled[0m=[36mtrue[0m    [32m[1m│[0m
+[32m[1m│[0m Environment variable:                            [36mCUCUMBER_PUBLISH_ENABLED[0m=[36mtrue[0m    [32m[1m│[0m
+[32m[1m│[0m JUnit:                                           [36m@CucumberOptions[0m(publish = [36mtrue[0m) [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m More information at [36mhttps://cucumber.io/docs/cucumber/environment-variables/[0m      [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m Disable this message with one of the following:                                   [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m src/test/resources/cucumber.properties:          [36mcucumber.publish.quiet[0m=[36mtrue[0m      [32m[1m│[0m
+[32m[1m│[0m src/test/resources/junit-platform.properties:    [36mcucumber.publish.quiet[0m=[36mtrue[0m      [32m[1m│[0m
+[32m[1m└───────────────────────────────────────────────────────────────────────────────────┘[0m
+
+
+# Created at 2022-11-15T15:59:54.716
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGDirectoryTestSuite,TestRunner.TestRun,null,null,null
+
+

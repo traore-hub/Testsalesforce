@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>RapportTestSalesforce</td>
+        <td>1</td>
+      <td>17 Nov 2022, 15:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Stepdefinition.CreateCampagn.click_button_campagn()</td>
+              <td>1</td>
+              <td class="duration" data-value="1400331500">1.400</td>
+              <td class="duration" data-value="1400331500">1.400</td>
+              <td class="duration" data-value="1400331500">1.400</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.CreateCampagn.click_save_campagn()</td>
+              <td>2</td>
+              <td class="duration" data-value="40878050">0.040</td>
+              <td class="duration" data-value="40878050">0.049</td>
+              <td class="duration" data-value="81756100">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.CreateCampagn.give_the_informations_the_campagn()</td>
+              <td>1</td>
+              <td class="duration" data-value="2484815500">2.484</td>
+              <td class="duration" data-value="2484815500">2.484</td>
+              <td class="duration" data-value="2484815500">2.484</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.CreateCampagn.launch_salesforce_portals()</td>
+              <td>2</td>
+              <td class="duration" data-value="1939220050">1.939</td>
+              <td class="duration" data-value="1939220050">3.269</td>
+              <td class="duration" data-value="3878440100">3.878</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.CreateCampagn.navigate_salesforce_modules_campagn()</td>
+              <td>1</td>
+              <td class="duration" data-value="1276194300">1.276</td>
+              <td class="duration" data-value="1276194300">1.276</td>
+              <td class="duration" data-value="1276194300">1.276</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.CreateCampagn.verify_if_campagn_is_create()</td>
+              <td>1</td>
+              <td class="duration" data-value="743455800">0.743</td>
+              <td class="duration" data-value="743455800">0.743</td>
+              <td class="duration" data-value="743455800">0.743</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.CreationOppportunity.close_browser()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.DeleteCampagn.delete_this_campagn()</td>
+              <td>1</td>
+              <td class="duration" data-value="17923280800">17.923</td>
+              <td class="duration" data-value="17923280800">17.923</td>
+              <td class="duration" data-value="17923280800">17.923</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.DeleteCampagn.launch_salesforce_portal()</td>
+              <td>1</td>
+              <td class="duration" data-value="1779324200">1.779</td>
+              <td class="duration" data-value="1779324200">1.779</td>
+              <td class="duration" data-value="1779324200">1.779</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.DeleteCampagn.navigate_to_url_salesforces()</td>
+              <td>1</td>
+              <td class="duration" data-value="786550100">0.786</td>
+              <td class="duration" data-value="786550100">0.786</td>
+              <td class="duration" data-value="786550100">0.786</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.DeleteCampagn.search_campagn_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="4497675600">4.497</td>
+              <td class="duration" data-value="4497675600">4.497</td>
+              <td class="duration" data-value="4497675600">4.497</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.ModifyCampagn.change_date()</td>
+              <td>1</td>
+              <td class="duration" data-value="2646393500">2.646</td>
+              <td class="duration" data-value="2646393500">2.646</td>
+              <td class="duration" data-value="2646393500">2.646</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.ModifyCampagn.change_the_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="819673600">0.819</td>
+              <td class="duration" data-value="819673600">0.819</td>
+              <td class="duration" data-value="819673600">0.819</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.ModifyCampagn.chech_campagn_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="749747800">0.749</td>
+              <td class="duration" data-value="749747800">0.749</td>
+              <td class="duration" data-value="749747800">0.749</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.ModifyCampagn.click_campagn()</td>
+              <td>1</td>
+              <td class="duration" data-value="2711217200">2.711</td>
+              <td class="duration" data-value="2711217200">2.711</td>
+              <td class="duration" data-value="2711217200">2.711</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Stepdefinition.ModifyCampagn.verify_if_campagn_name_and_date_is_modify()</td>
+              <td>1</td>
+              <td class="duration" data-value="30078114100">30.078</td>
+              <td class="duration" data-value="30078114100">30.078</td>
+              <td class="duration" data-value="30078114100">30.078</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>16</td>
+            <td>18</td>
+            <td class="duration">3.992</td>
+            <td class="duration">30.078</td>
+            <td class="duration">1:11.856</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

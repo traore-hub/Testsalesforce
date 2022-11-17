@@ -1,0 +1,142 @@
+# Created at 2022-11-15T17:50:44.077
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+
+# Created at 2022-11-15T17:50:47.952
+Unexpected IOException with stream:   [31mAnd [0m[31mUser navigate to Sales Portal[0m                                                                                [90m# Stepdefinition.CreationOppportunity.user_navigate_to_sales_portal()[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='brandBand_1']/div/div/div/div/div/div/div[2]/ul/li/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.2', revision: '702c64f787c'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5658e1b905e7da89b83de1ceb61fefc3, findElement {using=xpath, value=//div[@id='brandBand_1']/div/div/div/div/div/div/div[2]/ul/li/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\toumarou\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57360/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5658e1b905e7da89b83de1ceb61fefc3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at Stepdefinition.CreationOppportunity.user_navigate_to_sales_portal(CreationOppportunity.java:38)
+	at ✽.User navigate to Sales Portal(file:///C:/Users/toumarou/IdeaProjects/Testsalesforce-master/src/main/resources/Features/CreationOpportunity.feature:7)
+[0m
+
+
+# Created at 2022-11-15T17:50:47.962
+Unexpected IOException with stream:   [36mWhen [0m[36mUser Creates An Opportunity with : Amount [0m[36m[1m"1500"[0m[36m, Opportunity Stage [0m[36m[1m"Ingenieur"[0m[36m and Close Date [0m[36m[1m"03/10/2022"[0m [90m# Stepdefinition.CreationOppportunity.user_creates_an_opportunity_with_amount_opportunity_stage_and_close_date(java.lang.String,java.lang.String,java.lang.String)[0m
+
+
+# Created at 2022-11-15T17:50:47.962
+Unexpected IOException with stream:   [36mThen [0m[36mOpportunity should be created with correct information[0m                                                      [90m# Stepdefinition.CreationOppportunity.opportunity_should_be_created_with_correct_information()[0m
+
+
+# Created at 2022-11-15T17:50:47.963
+Unexpected IOException with stream:   [36mAnd [0m[36mclose Browser[0m                                                                                                [90m# Stepdefinition.CreationOppportunity.close_browser()[0m
+
+
+# Created at 2022-11-15T17:50:47.970
+Unexpected IOException with stream: 
+@Verify
+Scenario: Verify differents information                      [90m# src/main/resources/Features/VerifyOpportunity.feature:4[0m
+
+
+# Created at 2022-11-15T17:50:47.974
+Unexpected IOException with stream: ***********************Test started****************
+
+
+# Created at 2022-11-15T17:50:47.975
+Unexpected IOException with stream:   [32mGiven [0m[32mlaunch salesforce plateform opportunity section list[0m [90m# Stepdefinition.VerifyOpportunity.launch_salesforce_plateform_opportunity_section_list()[0m
+
+
+# Created at 2022-11-15T17:50:47.976
+Unexpected IOException with stream: tester
+
+
+# Created at 2022-11-15T17:50:47.976
+Unexpected IOException with stream:   [32mWhen [0m[32mclick opportunity[0m                                     [90m# Stepdefinition.VerifyOpportunity.click_opportunity()[0m
+
+
+# Created at 2022-11-15T17:51:18.036
+Unexpected IOException with stream:   [31mAnd [0m[31mselect opportunity[0m                                     [90m# Stepdefinition.VerifyOpportunity.select_opportunity()[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//th/span/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.2', revision: '702c64f787c'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5658e1b905e7da89b83de1ceb61fefc3, findElement {using=xpath, value=//th/span/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\toumarou\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57360/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5658e1b905e7da89b83de1ceb61fefc3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at Stepdefinition.VerifyOpportunity.select_opportunity(VerifyOpportunity.java:36)
+	at ✽.select opportunity(file:///C:/Users/toumarou/IdeaProjects/Testsalesforce-master/src/main/resources/Features/VerifyOpportunity.feature:7)
+[0m
+
+
+# Created at 2022-11-15T17:51:18.044
+Unexpected IOException with stream:   [36mThen [0m[36mchange the date[0m                                       [90m# Stepdefinition.VerifyOpportunity.change_the_date()[0m
+
+
+# Created at 2022-11-15T17:51:18.045
+Unexpected IOException with stream:   [36mAnd [0m[36mverify last date and current date[0m                      [90m# Stepdefinition.VerifyOpportunity.verify_date_and_current_date()[0m
+
+
+# Created at 2022-11-15T17:51:18.046
+Unexpected IOException with stream:   [36mAnd [0m[36mchange name[0m                                            [90m# Stepdefinition.VerifyOpportunity.change_name()[0m
+
+
+# Created at 2022-11-15T17:51:18.046
+Unexpected IOException with stream:   [36mAnd [0m[36mverify name again[0m                                      [90m# Stepdefinition.VerifyOpportunity.verify_name_again()[0m
+
+
+# Created at 2022-11-15T17:51:18.069
+Unexpected IOException with stream: [32m[1m┌───────────────────────────────────────────────────────────────────────────────────┐[0m
+[32m[1m│[0m Share your Cucumber Report with your team at [36m[1m[4mhttps://reports.cucumber.io[0m          [32m[1m│[0m
+[32m[1m│[0m Activate publishing with one of the following:                                    [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m src/test/resources/cucumber.properties:          [36mcucumber.publish.enabled[0m=[36mtrue[0m    [32m[1m│[0m
+[32m[1m│[0m src/test/resources/junit-platform.properties:    [36mcucumber.publish.enabled[0m=[36mtrue[0m    [32m[1m│[0m
+[32m[1m│[0m Environment variable:                            [36mCUCUMBER_PUBLISH_ENABLED[0m=[36mtrue[0m    [32m[1m│[0m
+[32m[1m│[0m JUnit:                                           [36m@CucumberOptions[0m(publish = [36mtrue[0m) [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m More information at [36mhttps://cucumber.io/docs/cucumber/environment-variables/[0m      [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m Disable this message with one of the following:                                   [32m[1m│[0m
+[32m[1m│[0m                                                                                   [32m[1m│[0m
+[32m[1m│[0m src/test/resources/cucumber.properties:          [36mcucumber.publish.quiet[0m=[36mtrue[0m      [32m[1m│[0m
+[32m[1m│[0m src/test/resources/junit-platform.properties:    [36mcucumber.publish.quiet[0m=[36mtrue[0m      [32m[1m│[0m
+[32m[1m└───────────────────────────────────────────────────────────────────────────────────┘[0m
+
+
+# Created at 2022-11-15T17:51:18.135
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGDirectoryTestSuite,TestRunner.TestRun,null,null,null
+
+
