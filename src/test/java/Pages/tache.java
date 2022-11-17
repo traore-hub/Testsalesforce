@@ -72,7 +72,7 @@ public class tache {
 
 	public void cliquer_sur_enregistrer(WebDriver driver) throws Throwable {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();",
-				driver.findElement(By.xpath("//button[3]/span")));
+				driver.findElement(By.xpath("//*/text()[normalize-space(.)='Enregistrer']/parent::*")));
 		
 
 	}
