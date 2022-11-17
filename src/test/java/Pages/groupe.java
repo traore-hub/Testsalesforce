@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import common.Utils;
+import io.cucumber.java.en.Then;
 
 public class groupe {
 	static String verifnomgroupe;
@@ -16,6 +17,7 @@ public class groupe {
 	WebDriver driver = null;
 	static String modifngrp;
 	static String nomOPP;
+	public static String VerifPub;
 
 	public groupe(WebDriver driver) {
 		this.driver = driver;
@@ -184,4 +186,35 @@ public class groupe {
 		assertEquals(verifopp.getText().contains(nomOPP), true);
 		driver.quit();
 	}
+	
+	
+	
+	public void cliquer_sur_publication(WebDriver driver)throws Throwable {
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();",
+				driver.findElement(By.xpath("//section/div/div/button")));
+		Thread.sleep(2000);
+		   
+	}
+
+	@Then("Ajouter une publication {string}")
+	public void ajouter_une_publication(WebDriver driver,String publ)throws Throwable {
+		((JavascriptExecutor) driver).executeScript("arguments[0].sendKeys(PUB);",
+				driver.findElement(By.xpath("//section/div/div/button")));
+         WebElement pub = driver.findElement(By.xpath("//span[@class=' label bBody'][contains(text(),'Partagez une mise à jour...')]"));
+         VerifPub = publ;
+		pub.sendKeys(VerifPub);
+		
+		System.out.println("la publication est  : " + VerifPub);
+	   
+	}
+
+	@Then("Cliquer sur partager publication")
+	public void cliquer_sur_partager_publication(WebDriver driver)throws Throwable {
+		driver.findElement(By.xpath("//div[3]/div/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div")).click();
+		Thread.sleep(1500);
+		WebElement vpub = driver.findElement(By.xpath("//div[2]/div/div/p/span"));
+		assertEquals(VerifPub, vpub.getText());
+
+	}
+
 }

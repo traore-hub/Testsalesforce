@@ -38,3 +38,12 @@ Feature: Groupe
     And Selectionner etape
     And Cliquer sur enregistrer opportunité
     And  verification  creation  opportunité dans un groupe
+    @tag8
+   Scenario: Ajouter une publication dans un groupe
+    Given Se connecter sur saleforce
+    And cliquer sur groupe 
+    When Chercher le groupe par le nom 
+    And Selectionner le groupe
+    Then Cliquer sur publication
+    And Ajouter une publication "publication dans un groupe de test groupe de test "
+    And Cliquer sur partager publication

@@ -112,5 +112,23 @@ public class groupestep {
 		grp.verification_creation_opportunité_dans_un_groupe(Browserhelper.driver);
 	   
 	}
+	
+	@Then("Cliquer sur publication")
+	public void cliquer_sur_publication()throws Throwable {
+		grp.cliquer_sur_publication(Browserhelper.driver);
+	   
+	}
+
+	@Then("Ajouter une publication {string}")
+	public void ajouter_une_publication(String publ)throws Throwable {
+	   grp.ajouter_une_publication(Browserhelper.driver,publ);
+	}
+
+	@Then("Cliquer sur partager publication")
+	public void cliquer_sur_partager_publication()throws Throwable {
+		grp.cliquer_sur_partager_publication(Browserhelper.driver);
+
+	}
+
 
 }
