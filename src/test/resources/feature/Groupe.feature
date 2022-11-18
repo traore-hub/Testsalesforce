@@ -47,3 +47,16 @@ Feature: Groupe
     Then Cliquer sur publication
     And Ajouter une publication "publication dans un groupe de test groupe de test "
     And Cliquer sur partager publication
+    
+    @tag9
+    Scenario: Ajouter un sondage dans un groupe
+    Given Se connecter sur saleforce
+    And cliquer sur groupe 
+    When Chercher le groupe par le nom 
+    And Selectionner le groupe
+    Then Cliquer sur sondage
+    And Remplir le champs du question
+    Then Remplir les champs des choix  
+    And Cliquer sur poser une question 
+
+    

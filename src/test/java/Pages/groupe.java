@@ -194,7 +194,7 @@ public class groupe {
 
 	}
 
-	@Then("Ajouter une publication {string}")
+
 	public void ajouter_une_publication(WebDriver driver, String publ) throws Throwable {
 		WebElement pub = driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/div/div/div/div/p"));
 		VerifPub = publ;
@@ -204,8 +204,8 @@ public class groupe {
 
 	}
 
-	@Then("Cliquer sur partager publication")
-	public void cliquer_sur_partager_publication(WebDriver driver) throws Throwable {
+
+	public void cliquer_sur_partager_pub(WebDriver driver) throws Throwable {
 		// pour trouver l'element au dessus de la page
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement Elemennt = driver
@@ -221,5 +221,18 @@ public class groupe {
 		driver.quit();
 
 	}
+	public void cliquer_sur_sondage(WebDriver driver)throws Throwable {
+		driver.findElement(By.xpath("//section/div/div/div/div/ul/li[2]/a")).click();
+		   
+	}
+	public void remplir_le_champs_du_question(WebDriver driver)throws Throwable {
+		driver.findElement(By.xpath("//div[@id='outerContainer']/div/textarea")).sendKeys("le sondage num 1 type de test ? :");
+	    
+	}
+	public void remplir_les_champs_des_choix(WebDriver driver)throws Throwable {
+	driver.findElement(By.xpath("/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div/div[2]/div[1]/div/div/section/div/div/div[1]/section[2]/div/div[3]/div/div/div/div[1]/section/div/ul/li[2]/div/div/input")).sendKeys("oui");
+	driver.findElement(By.xpath("/html/body/div[4]/div[1]/section/div[1]/div[2]/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div/div[2]/div[1]/div/div/section/div/div/div[1]/section[2]/div/div[3]/div/div/div/div[1]/section/div/ul/li[1]/div/div/input")).sendKeys("non");	
+	}
+
 
 }

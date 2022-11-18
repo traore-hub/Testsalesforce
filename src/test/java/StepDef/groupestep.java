@@ -126,8 +126,29 @@ public class groupestep {
 
 	@Then("Cliquer sur partager publication")
 	public void cliquer_sur_partager_publication()throws Throwable {
-		grp.cliquer_sur_partager_publication(Browserhelper.driver);
+		grp.cliquer_sur_partager_pub(Browserhelper.driver);
 
+	}
+	
+	@Then("Cliquer sur sondage")
+	public void cliquer_sur_sondage()throws Throwable {
+	   grp.cliquer_sur_sondage(Browserhelper.driver);
+	}
+
+	@Then("Remplir le champs du question")
+	public void remplir_le_champs_du_question()throws Throwable {
+	    
+	}
+
+	@Then("Remplir les champs des choix")
+	public void remplir_les_champs_des_choix()throws Throwable {
+		grp.remplir_les_champs_des_choix(Browserhelper.driver);
+	  
+	}
+
+	@Then("Cliquer sur poser une question")
+	public void cliquer_sur_poser_une_question()throws Throwable {
+	 
 	}
 
 

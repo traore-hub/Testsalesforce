@@ -30,7 +30,12 @@ public static void enterMdp(WebDriver driver) throws Exception {
 		
 	WebElement passwordField = driver.findElement(By.xpath("//input[@id='password']"));
 	passwordField.sendKeys(Utils.getProperty("user_pass"));
-	}	
+	}
+public void click_cx() {
+    Browserhelper.driver.findElement(By.xpath("//input[contains(@id,'Login')]")).click();
+    
+    
+}
 
 }
 

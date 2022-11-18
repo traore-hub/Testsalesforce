@@ -10,6 +10,6 @@ plugin = {"pretty",
         "html:target/report/cucumber.html",
         "json:target/report/cucumber.json"
 })
-public class run {
+public class Run {
 
 }

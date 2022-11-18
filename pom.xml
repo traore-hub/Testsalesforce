@@ -101,7 +101,7 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
-						<include>Runner.run</include>
+						<include>Runner.Run</include>
 					</includes>
 				</configuration>
 			</plugin>

@@ -1,5 +1,7 @@
 package common;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
@@ -52,6 +54,10 @@ public class Browserhelper {
 			}
 		}
 		Thread.sleep(1000);
+	}
+	public static void checkAuthentication(WebDriver driver) {
+		String currentPath = driver.getCurrentUrl();
+		assertEquals("Logged in : true", "Logged in : " + !currentPath.contains("cas/login"));
 	}
 
 }

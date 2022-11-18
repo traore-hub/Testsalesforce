@@ -6,3 +6,20 @@ Objet=nouvelle_tache_test_brahim
 nomsearch=nouvelle_tache_test_brahim
 ModifObjet=modification_du_tache_du_test_brahim
 groupesearch=groupe de test
+
+contact Identification
+    contact1
+first_name=Fares
+last_name=Ayeche
+Accoun_name=ACME
+   contact 2
+first_name2=Haroun
+last_name2=Ayeche
+
+     Contact
+first_name3=Fares
+last_name3=Ayeche
+
+expectedResult=success 
+Contact "Mr. Fares Ayeche" créé(e) 
+Fermer
