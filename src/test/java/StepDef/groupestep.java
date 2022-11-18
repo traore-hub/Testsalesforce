@@ -84,72 +84,75 @@ public class groupestep {
 	public void Cliquer_sur_supprimer_groupe() throws Throwable {
 		grp.Cliquer_sur_supprimer_groupe(Browserhelper.driver);
 	}
+
 	@Then("Cliquer sur nouvelle opportunité")
-	public void cliquer_sur_nouvelle_opportunité()throws Throwable {
+	public void cliquer_sur_nouvelle_opportunité() throws Throwable {
 		grp.cliquer_sur_nouvelle_opportunité(Browserhelper.driver);
 
 	}
 
 	@Then("Entrer le nom de lopportunité {string}")
-	public void entrer_le_nom_de_lopportunité(String nomopp)throws Throwable {
+	public void entrer_le_nom_de_lopportunité(String nomopp) throws Throwable {
 		grp.entrer_le_nom_de_lopportunité(Browserhelper.driver, nomopp);
 
 	}
 
 	@Then("Selectionner etape")
-	public void selectionner_etape()throws Throwable {
+	public void selectionner_etape() throws Throwable {
 		grp.selectionner_etape(Browserhelper.driver);
 
 	}
 
 	@Then("Cliquer sur enregistrer opportunité")
-	public void cliquer_sur_enregistrer_opportunité()throws Throwable {
+	public void cliquer_sur_enregistrer_opportunité() throws Throwable {
 		grp.cliquer_sur_enregistrer_opportunité(Browserhelper.driver);
 
 	}
+
 	@Then("verification  creation  opportunité dans un groupe")
-	public void verification_creation_opportunité_dans_un_groupe()throws Throwable {
+	public void verification_creation_opportunité_dans_un_groupe() throws Throwable {
 		grp.verification_creation_opportunité_dans_un_groupe(Browserhelper.driver);
-	   
+
 	}
-	
+
 	@Then("Cliquer sur publication")
-	public void cliquer_sur_publication()throws Throwable {
+	public void cliquer_sur_publication() throws Throwable {
 		grp.cliquer_sur_publication(Browserhelper.driver);
-	   
+
 	}
 
 	@Then("Ajouter une publication {string}")
-	public void ajouter_une_publication(String publ)throws Throwable {
-	   grp.ajouter_une_publication(Browserhelper.driver,publ);
+	public void ajouter_une_publication(String publ) throws Throwable {
+		grp.ajouter_une_publication(Browserhelper.driver, publ);
 	}
 
 	@Then("Cliquer sur partager publication")
-	public void cliquer_sur_partager_publication()throws Throwable {
+	public void cliquer_sur_partager_publication() throws Throwable {
 		grp.cliquer_sur_partager_pub(Browserhelper.driver);
 
 	}
-	
+
 	@Then("Cliquer sur sondage")
-	public void cliquer_sur_sondage()throws Throwable {
-	   grp.cliquer_sur_sondage(Browserhelper.driver);
+	public void cliquer_sur_sondage() throws Throwable {
+		grp.cliquer_sur_sondage(Browserhelper.driver);
 	}
 
 	@Then("Remplir le champs du question")
-	public void remplir_le_champs_du_question()throws Throwable {
-	    
+	public void remplir_le_champs_du_question() throws Throwable {
+		grp.remplir_le_champs_du_question(Browserhelper.driver);
+
 	}
 
 	@Then("Remplir les champs des choix")
-	public void remplir_les_champs_des_choix()throws Throwable {
+	public void remplir_les_champs_des_choix() throws Throwable {
 		grp.remplir_les_champs_des_choix(Browserhelper.driver);
-	  
+
 	}
 
 	@Then("Cliquer sur poser une question")
-	public void cliquer_sur_poser_une_question()throws Throwable {
-	 
-	}
+	public void cliquer_sur_poser_une_question() throws Throwable {
+		grp.cliquer_sur_poser_une_question(Browserhelper.driver);
 
+	}
 
 }
