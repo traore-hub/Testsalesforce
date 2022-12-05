@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,30 +10,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import common.Browserhelper;
 import common.Utils;
 
-public class tache {
+public class Tache {
 	WebDriver driver = null;
-	public static String NomObjetModifier;
+	public static String nomObjetModifier;
 
-	public tache(WebDriver driver) {
+	public Tache(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public void seconnecter(WebDriver driver) throws Throwable {
-		Browserhelper.driver = Browserhelper.initializeDriver(Browserhelper.driver);
-		connexion.navigate(Browserhelper.driver);
-		connexion.enterEmail(Browserhelper.driver);
-		connexion.enterMdp(Browserhelper.driver);
-		Browserhelper.driver.findElement(By.xpath("//input[contains(@id,'Login')]")).click();
-		// Browserhelper.driver.findElement(By.xpath("//a[contains(text(),'Me le
-		// rappeler ultérieurement')]")).click();
-		// cliquer sur le menu pour selectionner vente
-		Browserhelper.driver.findElement(By.xpath("//button/div/div[8]")).click();
-		// chercher ventes
-		Browserhelper.driver.findElement(By.xpath("//lightning-input/div/input")).sendKeys("ventes");
-		// selectionner ventes
-		Browserhelper.driver.findElement(By.xpath("(//*[@class='slds-truncate']/b)")).click();
-		Thread.sleep(3000);
-	}
+
 
 	public void cliquer_sur_tache(WebDriver driver) throws Throwable {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();",
@@ -50,8 +35,8 @@ public class tache {
 
 	public void entrer_lobjet(WebDriver driver) throws Throwable {
 
-		WebElement Objet = driver.findElement(By.xpath("//lightning-base-combobox/div/div/input"));
-		Objet.sendKeys(Utils.getProperty("Objet"));
+		WebElement objet = driver.findElement(By.xpath("//lightning-base-combobox/div/div/input"));
+		objet.sendKeys(Utils.getProperty("nomtache"));
 
 	}
 
@@ -99,12 +84,12 @@ public class tache {
 	public void modifier_objet_avec_le_nom(WebDriver driver, String modifobj) throws Throwable {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//lightning-base-combobox/div/div/input")).click();
-		WebElement ModifObjetc = driver.findElement(By.xpath("//lightning-base-combobox/div/div/input"));
+		WebElement modifObjetc = driver.findElement(By.xpath("//lightning-base-combobox/div/div/input"));
 
-		ModifObjetc.sendKeys(modifobj);
+		modifObjetc.sendKeys(modifobj);
 		driver.findElement(By.xpath("//lightning-base-combobox/div/div/input")).clear();
-		ModifObjetc.sendKeys(modifobj);
-		NomObjetModifier = modifobj;
+		modifObjetc.sendKeys(modifobj);
+		nomObjetModifier = modifobj;
 
 	}
 
@@ -117,8 +102,8 @@ public class tache {
 	public void modifier_le_priorité(WebDriver driver) throws Throwable {
 		// pour trouver l'element au dessus de la page
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement Element = driver.findElement(By.xpath("//div[4]/div/div/div/div/div/div/div/div/a"));
-		js.executeScript("arguments[0].scrollIntoView();", Element);
+		WebElement element = driver.findElement(By.xpath("//div[4]/div/div/div/div/div/div/div/div/a"));
+		js.executeScript("arguments[0].scrollIntoView();", element);
 		// ouvrir la liste pour selectionner le priorité
 		driver.findElement(By.xpath("//div[4]/div/div/div/div/div/div/div/div/a")).click();
 		// selectionner le type de priorité
@@ -131,7 +116,7 @@ public class tache {
 	}
 
 	public void verfication_du_modification(WebDriver driver) throws Throwable {
-		assertEquals(NomObjetModifier, driver.findElement(By.xpath("//div[2]/div/div/div[2]/span/span")).getText());
+		assertEquals(nomObjetModifier, driver.findElement(By.xpath("//div[2]/div/div/div[2]/span/span")).getText());
 		System.out.println(driver.findElement(By.xpath("//div[2]/div/div/div[2]/span/span")).getText());
 		driver.quit();
 	}
@@ -147,9 +132,9 @@ public class tache {
 //confirmer la suppression 
 		driver.findElement(By.xpath("//*/text()[normalize-space(.)='Supprimer']/parent::*")).click();
 //verifier que le message s'affiche 
-		WebElement SuppVerif = driver.findElement(By.xpath("//div[6]/div/div/div/div/div/div/span"));
-		SuppVerif.getText();
-		System.out.println("le message est : " + SuppVerif.getText());
+		WebElement suppVerif = driver.findElement(By.xpath("//div[6]/div/div/div/div/div/div/span"));
+		suppVerif.getText();
+		System.out.println("le message est : " + suppVerif.getText());
 		driver.quit();
 	}
 

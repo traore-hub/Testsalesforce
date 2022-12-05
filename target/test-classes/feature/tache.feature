@@ -1,6 +1,6 @@
-@tag
+@Tache
 Feature: tache
-  @tag1
+  @creationTache
   Scenario: creation tache
     Given Se connecter sur saleforce
     And cliquer sur tache 
@@ -9,7 +9,7 @@ Feature: tache
     And Selectionner le priorité
     Then Selectionner le statut 
     And Cliquer sur enregistrer   
-   @tag2
+   @modificationTache
   Scenario: modification tache
    Given Se connecter sur saleforce
     And cliquer sur tache 
@@ -20,7 +20,7 @@ Feature: tache
     And Modifier le statut
     And Modifier le priorité 
     And Cliquer sur enrigistrer modification tache
-    @tag3
+    @suppressionTache
   Scenario: supprimer une  tache
    Given Se connecter sur saleforce
     And cliquer sur tache 

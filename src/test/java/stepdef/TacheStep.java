@@ -1,18 +1,19 @@
-package StepDef;
+package stepDef;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
-import Pages.*;
+import pages.*;
 import common.*;
 
-public class tacheStep {
-	connexion log;
-	tache tch;
+public class TacheStep {
+	Connexion connexion;
+	Tache tch;
 
 	@Given("Se connecter sur saleforce")
 	public void se_connecter_sur_saleforce() throws Throwable {
-		tch = new tache(Browserhelper.driver);
-		tch.seconnecter(Browserhelper.driver);
+		tch = new Tache(Browserhelper.driver);
+		connexion = new Connexion(Browserhelper.driver);
+		connexion.seconnecter(Browserhelper.driver);
 	}
 
 	@Given("cliquer sur tache")

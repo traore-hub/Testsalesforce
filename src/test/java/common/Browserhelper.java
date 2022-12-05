@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.JavascriptExecutor;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browserhelper {
 
@@ -26,10 +27,12 @@ public class Browserhelper {
 	}
 
 	public static WebDriver initializeDriver(WebDriver driver) throws Exception {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications"); // disable popup notification
-		System.setProperty("webdriver.chrome.driver", Utils.getProperty("TestDriverPath"));
-		driver = new ChromeDriver(options);
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("--disable-notifications"); // disable popup notification
+		//System.setProperty("webdriver.chrome.driver", Utils.getProperty("TestDriverPath"));
+		WebDriverManager.chromedriver().setup();
+		driver= new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		return (driver);
 	}

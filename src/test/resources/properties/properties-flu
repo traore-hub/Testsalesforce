@@ -1,25 +1,8 @@
-TestDriverPath=C:\\selenium\\chromedriver.exe
 Web_Portal_Link=https://cunning-bear-viyty0-dev-ed.trailblaze.lightning.force.com/lightning/page/home
 user_name=brahim.bounguicha@cunning-bear-viyty0.com
 user_pass=GOLF5tdi135
-Objet=nouvelle_tache_test_brahim
+nomtache=nouvelle_tache_test_brahim
 nomsearch=nouvelle_tache_test_brahim
-ModifObjet=modification_du_tache_du_test_brahim
-groupesearch=groupe de test
 
-contact Identification
-    contact1
-first_name=Fares
-last_name=Ayeche
-Accoun_name=ACME
-   contact 2
-first_name2=Haroun
-last_name2=Ayeche
 
-     Contact
-first_name3=Fares
-last_name3=Ayeche
 
-expectedResult=success 
-Contact "Mr. Fares Ayeche" créé(e) 
-Fermer
